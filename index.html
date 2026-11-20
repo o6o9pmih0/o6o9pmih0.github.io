@@ -1,0 +1,1648 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>极品黑料网 - 影像内容品牌,深耕多元影像内容社区</title>
+<meta name="description" content="极品黑料网官方网站，专注多元影像内容与创作者社区的影像品牌，提供企业级内容生态与精品影像。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ff3b3b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --jphl-ink:#0e0e12;
+  --jphl-ink2:#1a1a22;
+  --jphl-red:#e8232a;
+  --jphl-red2:#ff4c4c;
+  --jphl-paper:#f4f3f1;
+  --jphl-line:#2a2a33;
+  --jphl-gray:#8a8a95;
+  --jphl-white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:118px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+  background:var(--jphl-paper);
+  color:var(--jphl-ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.jphl-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ===== 公告条 + 页头 吸顶 ===== */
+.jphl-stickyhead{position:sticky;top:0;z-index:120}
+.jphl-notice{
+  background:var(--jphl-ink);
+  color:#e9e9ee;
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.jphl-notice .jphl-wrap{display:flex;align-items:center;gap:12px;height:40px;overflow:hidden}
+.jphl-notice-tag{
+  flex:none;background:var(--jphl-red);color:#fff;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:3px;letter-spacing:.08em;
+}
+.jphl-notice-track{flex:1;overflow:hidden;white-space:nowrap}
+.jphl-notice-track span{display:inline-block;padding-right:48px}
+.jphl-notice a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+.jphl-header{
+  background:rgba(244,243,241,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ddd9d3;
+}
+.jphl-header .jphl-wrap{display:flex;align-items:center;gap:26px;height:68px}
+.jphl-logo{display:flex;align-items:center;gap:10px;flex:none}
+.jphl-logo-mark{
+  width:36px;height:36px;border-radius:9px;background:var(--jphl-ink);
+  display:grid;place-items:center;flex:none;
+}
+.jphl-logo-mark svg{width:16px;height:16px}
+.jphl-logo-text{font-size:19px;font-weight:800;letter-spacing:.02em;white-space:nowrap}
+.jphl-logo-text small{display:block;font-size:10px;font-weight:500;color:var(--jphl-gray);letter-spacing:.22em}
+.jphl-nav{display:flex;align-items:center;gap:22px;margin-left:auto;font-size:14.5px;font-weight:500}
+.jphl-nav a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.jphl-nav a:hover{color:var(--jphl-red);border-bottom-color:var(--jphl-red)}
+.jphl-header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.jphl-search{
+  display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #ddd9d3;
+  border-radius:999px;padding:6px 8px 6px 14px;
+}
+.jphl-search input{
+  border:none;outline:none;background:transparent;font-size:13.5px;width:130px;color:var(--jphl-ink);
+}
+.jphl-search button{
+  width:28px;height:28px;border-radius:50%;background:var(--jphl-ink);color:#fff;
+  display:grid;place-items:center;font-size:13px;
+}
+.jphl-burger{display:none;width:40px;height:40px;border-radius:9px;background:var(--jphl-ink);color:#fff;font-size:18px}
+.jphl-mobile-nav{display:none;background:#fff;border-bottom:1px solid #ddd9d3}
+.jphl-mobile-nav.open{display:block}
+.jphl-mobile-nav ul{padding:8px 22px 16px}
+.jphl-mobile-nav li{border-bottom:1px dashed #e3dfd9}
+.jphl-mobile-nav a{display:block;padding:12px 0;font-size:15px;font-weight:500}
+.jphl-mobile-nav .jphl-msearch{display:flex;gap:8px;padding:12px 22px 0}
+.jphl-mobile-nav .jphl-msearch input{flex:1;border:1px solid #ddd9d3;border-radius:999px;padding:9px 16px;font-size:14px;outline:none}
+.jphl-mobile-nav .jphl-msearch button{background:var(--jphl-red);color:#fff;border-radius:999px;padding:0 18px;font-size:14px;font-weight:600}
+
+/* ===== 首屏 ===== */
+.jphl-hero{background:var(--jphl-ink);color:#f2f1ef;padding:64px 0 70px;position:relative;overflow:hidden}
+.jphl-hero::after{
+  content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,35,42,.35),transparent 68%);
+}
+.jphl-hero .jphl-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.jphl-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;
+  color:#ffb3b3;border:1px solid #3a3a46;border-radius:999px;padding:5px 14px;margin-bottom:20px;
+}
+.jphl-hero h1{font-size:clamp(38px,5.4vw,62px);line-height:1.1;font-weight:900;letter-spacing:.01em}
+.jphl-hero h1 em{font-style:normal;color:var(--jphl-red2)}
+.jphl-hero-lead{font-size:16.5px;color:#c4c3cd;margin:18px 0 8px;max-width:520px}
+.jphl-hero-desc{font-size:14px;color:#9695a0;max-width:540px;line-height:1.85}
+.jphl-hero-stats{display:flex;gap:34px;margin:28px 0 30px;flex-wrap:wrap}
+.jphl-hero-stats b{display:block;font-size:27px;font-weight:800;letter-spacing:.01em}
+.jphl-hero-stats b span{color:var(--jphl-red2);font-size:16px;margin-left:2px}
+.jphl-hero-stats i{font-style:normal;font-size:12.5px;color:#8a8a95;letter-spacing:.06em}
+.jphl-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.jphl-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;
+  font-size:14.5px;font-weight:700;transition:.2s;border:1px solid transparent;
+}
+.jphl-btn-main{background:var(--jphl-red);color:#fff}
+.jphl-btn-main:hover{background:#ff2f38;transform:translateY(-2px)}
+.jphl-btn-ghost{border-color:#3e3e4a;color:#e8e8ee}
+.jphl-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.jphl-hero-visual{position:relative}
+.jphl-hero-figure{
+  border-radius:18px;overflow:hidden;border:1px solid #2c2c37;position:relative;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.9);
+}
+.jphl-hero-figure img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.jphl-hero-badge{
+  position:absolute;left:14px;top:14px;background:rgba(14,14,18,.82);color:#fff;
+  font-size:11.5px;letter-spacing:.1em;padding:5px 11px;border-radius:5px;border:1px solid #3d3d48;
+}
+.jphl-hero-float{
+  position:absolute;right:-14px;bottom:-20px;background:#fff;color:var(--jphl-ink);
+  border-radius:14px;padding:13px 17px;box-shadow:0 18px 40px -18px rgba(0,0,0,.6);
+  display:flex;align-items:center;gap:11px;max-width:250px;
+}
+.jphl-hero-float .jphl-avatar{width:38px;height:38px}
+.jphl-hero-float b{font-size:13.5px;display:block}
+.jphl-hero-float small{font-size:11.5px;color:#77767f}
+
+/* 头像通用 */
+.jphl-avatar{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-size:16px;font-weight:800;color:#fff;flex:none;letter-spacing:0;
+}
+.jphl-av-1{background:linear-gradient(135deg,#e8232a,#7a1114)}
+.jphl-av-2{background:linear-gradient(135deg,#2b6cff,#123b9c)}
+.jphl-av-3{background:linear-gradient(135deg,#1f9d63,#0c5a35)}
+.jphl-av-4{background:linear-gradient(135deg,#b46b1e,#6d3c07)}
+.jphl-av-5{background:linear-gradient(135deg,#7b4bd1,#3c1f78)}
+.jphl-av-6{background:linear-gradient(135deg,#0f8fa8,#08566a)}
+
+/* ===== 通用 section ===== */
+.jphl-section{padding:72px 0}
+.jphl-section-alt{background:#fff}
+.jphl-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px}
+.jphl-sec-head h2{font-size:clamp(24px,3vw,32px);font-weight:900;letter-spacing:.01em;line-height:1.2}
+.jphl-sec-head h2 span{color:var(--jphl-red)}
+.jphl-sec-head p{font-size:14px;color:#6e6d76;margin-top:8px;max-width:640px}
+.jphl-kicker{
+  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--jphl-red);
+  margin-bottom:10px;
+}
+.jphl-more{font-size:13.5px;font-weight:700;color:var(--jphl-ink);white-space:nowrap;border-bottom:2px solid var(--jphl-red);padding-bottom:2px}
+
+/* 焦点内容 B: 2大4小 */
+.jphl-focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.jphl-focus-card{
+  border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e4e0da;
+  box-shadow:0 12px 30px -24px rgba(0,0,0,.65);transition:.25s;
+}
+.jphl-focus-card:hover{transform:translateY(-5px);box-shadow:0 22px 42px -26px rgba(0,0,0,.7)}
+.jphl-cover{position:relative;overflow:hidden;background:#222}
+.jphl-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.4s}
+.jphl-focus-card:hover .jphl-cover img{transform:scale(1.04)}
+.jphl-cover-tag{
+  position:absolute;left:10px;top:10px;background:rgba(14,14,18,.8);color:#fff;font-size:11px;
+  padding:3px 9px;border-radius:4px;letter-spacing:.06em;z-index:2;
+}
+.jphl-cover-play{
+  position:absolute;inset:0;display:grid;place-items:center;z-index:2;pointer-events:none;
+}
+.jphl-cover-play svg{width:46px;height:46px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5));opacity:.92}
+.jphl-cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62))}
+.jphl-cover-meta{
+  position:absolute;left:12px;right:12px;bottom:10px;color:#fff;font-size:12px;
+  display:flex;justify-content:space-between;z-index:2;
+}
+.jphl-focus-body{padding:16px 18px 18px}
+.jphl-focus-body h3{font-size:17.5px;font-weight:800;line-height:1.45}
+.jphl-focus-body p{font-size:13px;color:#6e6d76;margin-top:7px;line-height:1.7}
+.jphl-card-foot{display:flex;align-items:center;gap:10px;margin-top:13px;font-size:12.5px;color:#8a8992}
+.jphl-card-foot .jphl-avatar{width:28px;height:28px;font-size:12px}
+.jphl-card-foot b{color:var(--jphl-ink);font-weight:700}
+
+/* 小卡 */
+.jphl-smalllist{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:22px}
+.jphl-vcard{
+  display:grid;grid-template-columns:150px 1fr;gap:14px;background:#fff;border:1px solid #e4e0da;
+  border-radius:13px;overflow:hidden;transition:.22s;padding-right:12px;
+}
+.jphl-vcard:hover{transform:translateY(-3px);border-color:#c9c4bc;box-shadow:0 14px 26px -22px rgba(0,0,0,.6)}
+.jphl-vcard .jphl-cover img{height:100%;aspect-ratio:4/3;object-fit:cover}
+.jphl-vcard .jphl-cover{height:100%}
+.jphl-vcard-body{padding:12px 0;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.jphl-vcard-body h3{font-size:14.5px;font-weight:700;line-height:1.45}
+.jphl-vcard-body p{font-size:12px;color:#7a7982;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.jphl-vcard-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.jphl-chip{font-size:11px;background:#f1efec;color:#57565f;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.jphl-chip-red{background:#fdeaea;color:var(--jphl-red)}
+
+/* 视频流 3列 */
+.jphl-videoflow{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.jphl-vc{background:#fff;border:1px solid #e4e0da;border-radius:15px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.jphl-vc:hover{transform:translateY(-5px);box-shadow:0 20px 38px -28px rgba(0,0,0,.65)}
+.jphl-vc-body{padding:15px 16px 16px;flex:1;display:flex;flex-direction:column}
+.jphl-vc-body h3{font-size:15.5px;font-weight:800;line-height:1.5}
+.jphl-vc-body p{font-size:12.5px;color:#75747d;margin-top:6px;line-height:1.7;flex:1}
+.jphl-vc-author{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:#8a8992}
+.jphl-vc-author b{color:var(--jphl-ink)}
+.jphl-vc-actions{display:flex;align-items:center;gap:16px;margin-top:12px;padding-top:12px;border-top:1px dashed #e6e2dc;font-size:12.5px;color:#7a7982}
+.jphl-act{display:inline-flex;align-items:center;gap:5px;transition:.18s;color:#7a7982}
+.jphl-act:hover{color:var(--jphl-red)}
+.jphl-act.on{color:var(--jphl-red);font-weight:700}
+.jphl-act svg{width:15px;height:15px}
+.jphl-vc-actions .jphl-flexsp{flex:1}
+
+/* 专题 */
+.jphl-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.jphl-topic{
+  border-radius:15px;overflow:hidden;position:relative;background:#1a1a22;color:#fff;
+  border:1px solid #2b2b34;
+}
+.jphl-topic img{width:100%;aspect-ratio:16/10;object-fit:cover;opacity:.78;transition:.35s}
+.jphl-topic:hover img{opacity:.95;transform:scale(1.03)}
+.jphl-topic-body{padding:18px 18px 20px}
+.jphl-topic-body h3{font-size:17px;font-weight:800}
+.jphl-topic-body p{font-size:12.5px;color:#a9a8b2;margin-top:7px;line-height:1.7}
+.jphl-topic-status{
+  display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-size:11.5px;
+  color:#ffb3b3;letter-spacing:.06em;
+}
+.jphl-dot{width:6px;height:6px;border-radius:50%;background:var(--jphl-red2);display:inline-block}
+
+/* 创作者 */
+.jphl-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.jphl-cr{
+  background:#fff;border:1px solid #e4e0da;border-radius:15px;padding:22px 18px;text-align:center;
+  transition:.24s;display:flex;flex-direction:column;
+}
+.jphl-cr:hover{transform:translateY(-5px);box-shadow:0 18px 36px -28px rgba(0,0,0,.6);border-color:#cfcac2}
+.jphl-cr .jphl-avatar{width:62px;height:62px;font-size:22px;margin:0 auto 12px}
+.jphl-cr h3{font-size:15.5px;font-weight:800}
+.jphl-cr .jphl-cr-field{font-size:11.5px;color:var(--jphl-red);letter-spacing:.06em;margin-top:3px;font-weight:700}
+.jphl-cr p{font-size:12.5px;color:#75747d;margin-top:10px;line-height:1.7;flex:1}
+.jphl-cr-meta{display:flex;justify-content:center;gap:18px;margin-top:13px;font-size:11.5px;color:#8a8992}
+.jphl-cr-meta b{display:block;font-size:14px;color:var(--jphl-ink)}
+.jphl-cr-btn{
+  margin-top:14px;border:1px solid #d8d3cb;border-radius:999px;padding:7px 0;font-size:12.5px;
+  font-weight:700;color:var(--jphl-ink);transition:.2s;
+}
+.jphl-cr-btn:hover{background:var(--jphl-ink);color:#fff;border-color:var(--jphl-ink)}
+
+/* 故事随笔 */
+.jphl-stories{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.jphl-story{background:#fff;border:1px solid #e4e0da;border-radius:15px;overflow:hidden;display:flex;flex-direction:column}
+.jphl-story .jphl-cover img{aspect-ratio:16/9}
+.jphl-story-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.jphl-story-body h3{font-size:16.5px;font-weight:800;line-height:1.5}
+.jphl-story-body p{font-size:13px;color:#6e6d76;margin-top:9px;line-height:1.85;flex:1}
+.jphl-story-sign{font-size:12px;color:#95949d;margin-top:14px;border-top:1px dashed #e6e2dc;padding-top:11px}
+
+/* 数据榜单 */
+.jphl-rank{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.jphl-rankcol{background:#fff;border:1px solid #e4e0da;border-radius:15px;padding:20px}
+.jphl-rankcol h3{font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.jphl-rankcol h3 em{font-style:normal;font-size:11px;color:#fff;background:var(--jphl-ink);border-radius:4px;padding:1px 7px;letter-spacing:.06em}
+.jphl-rankrow{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px dashed #ece8e2;font-size:13px}
+.jphl-rankrow:last-child{border-bottom:none}
+.jphl-rankno{width:22px;height:22px;border-radius:6px;background:#f1efec;color:#83828b;font-size:11.5px;font-weight:800;display:grid;place-items:center;flex:none}
+.jphl-rankrow:nth-child(2) .jphl-rankno{background:var(--jphl-red);color:#fff}
+.jphl-rankrow:nth-child(3) .jphl-rankno{background:#2b2b33;color:#fff}
+.jphl-rankrow:nth-child(4) .jphl-rankno{background:#b9752b;color:#fff}
+.jphl-rankrow b{font-weight:700;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jphl-rankrow i{font-style:normal;font-size:11.5px;color:#92919a;white-space:nowrap}
+
+/* 评价 */
+.jphl-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.jphl-rv{background:#fff;border:1px solid #e4e0da;border-radius:15px;padding:20px;display:flex;flex-direction:column}
+.jphl-rv-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.jphl-rv-top b{font-size:13.5px;display:block}
+.jphl-rv-top small{font-size:11px;color:#95949d}
+.jphl-rv p{font-size:13px;color:#5d5c66;line-height:1.85;flex:1}
+.jphl-rv-stars{margin-top:12px;color:#e8232a;font-size:12.5px;letter-spacing:2px}
+
+/* 灵感/工具 */
+.jphl-idea{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start}
+.jphl-idea-list{display:flex;flex-direction:column;gap:13px}
+.jphl-idea-item{
+  background:#fff;border:1px solid #e4e0da;border-left:4px solid var(--jphl-red);
+  border-radius:11px;padding:15px 17px;
+}
+.jphl-idea-item h3{font-size:14.5px;font-weight:800}
+.jphl-idea-item p{font-size:12.5px;color:#75747d;margin-top:5px;line-height:1.7}
+.jphl-toolbox{background:var(--jphl-ink);color:#e9e9ee;border-radius:16px;padding:26px 24px}
+.jphl-toolbox h3{font-size:16px;font-weight:800;margin-bottom:6px}
+.jphl-toolbox > p{font-size:12.5px;color:#9695a0;line-height:1.75}
+.jphl-tool-chips{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 18px}
+.jphl-tool-chips button{
+  font-size:12px;color:#ffd0d0;border:1px solid #3c3c47;border-radius:999px;padding:5px 12px;transition:.2s;background:transparent;
+}
+.jphl-tool-chips button:hover{border-color:var(--jphl-red2);color:#fff;background:rgba(232,35,42,.18)}
+.jphl-tool-output{
+  background:#15151b;border:1px solid #2c2c37;border-radius:10px;padding:14px 15px;
+  font-size:12.5px;color:#b9b8c2;line-height:1.8;min-height:86px;
+}
+.jphl-tool-output b{color:#ff8f8f}
+
+/* 企业动态 */
+.jphl-news{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.jphl-news-item{
+  display:flex;gap:16px;background:#fff;border:1px solid #e4e0da;border-radius:13px;padding:16px 18px;transition:.22s;
+}
+.jphl-news-item:hover{border-color:#cfcac2;transform:translateY(-3px)}
+.jphl-news-date{
+  flex:none;width:56px;text-align:center;border-right:1px solid #ece8e2;padding-right:14px;
+}
+.jphl-news-date b{font-size:20px;font-weight:800;display:block;line-height:1.1}
+.jphl-news-date small{font-size:10.5px;color:#95949d;letter-spacing:.06em}
+.jphl-news-body h3{font-size:14.5px;font-weight:800;line-height:1.5}
+.jphl-news-body p{font-size:12.5px;color:#75747d;margin-top:5px;line-height:1.7}
+
+/* 合作品牌 */
+.jphl-partners{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.jphl-partner{
+  background:#fff;border:1px solid #e4e0da;border-radius:11px;padding:16px 10px;text-align:center;
+  font-size:13px;font-weight:700;color:#57565f;transition:.2s;letter-spacing:.02em;
+}
+.jphl-partner:hover{color:var(--jphl-red);border-color:#e8b7b9}
+
+/* FAQ */
+.jphl-faq{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:11px}
+.jphl-faq details{background:#fff;border:1px solid #e4e0da;border-radius:11px;padding:0 18px;transition:.2s}
+.jphl-faq details[open]{border-color:#d9a3a5;box-shadow:0 12px 26px -24px rgba(0,0,0,.6)}
+.jphl-faq summary{
+  list-style:none;cursor:pointer;padding:15px 0;font-size:14.5px;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.jphl-faq summary::-webkit-details-marker{display:none}
+.jphl-faq summary::after{content:"+";font-size:19px;color:var(--jphl-red);font-weight:700;line-height:1}
+.jphl-faq details[open] summary::after{content:"–"}
+.jphl-faq details p{font-size:13px;color:#6e6d76;line-height:1.85;padding-bottom:16px}
+
+/* 联系/投稿 */
+.jphl-contact{background:var(--jphl-ink);color:#eeedf2;padding:64px 0}
+.jphl-contact .jphl-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.jphl-contact h2{font-size:clamp(23px,3vw,31px);font-weight:900;line-height:1.3}
+.jphl-contact h2 span{color:var(--jphl-red2)}
+.jphl-contact p{font-size:13.5px;color:#a4a3ad;margin-top:12px;line-height:1.85;max-width:460px}
+.jphl-contact-list{margin-top:21px;display:flex;flex-direction:column;gap:9px;font-size:13.5px;color:#cdccd4}
+.jphl-contact-list b{color:#fff;font-weight:700}
+.jphl-contact-panel{background:#191920;border:1px solid #2e2e38;border-radius:16px;padding:24px}
+.jphl-contact-panel h3{font-size:15.5px;font-weight:800;margin-bottom:4px}
+.jphl-contact-panel small{font-size:12px;color:#8a8992}
+.jphl-field{margin-top:13px}
+.jphl-field label{font-size:12px;color:#a4a3ad;display:block;margin-bottom:5px;letter-spacing:.04em}
+.jphl-field input,.jphl-field textarea{
+  width:100%;background:#101016;border:1px solid #32323d;border-radius:8px;padding:10px 12px;
+  color:#eeedf2;font-size:13px;outline:none;font-family:inherit;transition:.2s;
+}
+.jphl-field input:focus,.jphl-field textarea:focus{border-color:var(--jphl-red)}
+.jphl-field textarea{resize:vertical;min-height:72px}
+.jphl-contact-panel .jphl-btn-main{width:100%;justify-content:center;margin-top:16px}
+
+/* 页脚 */
+.jphl-footer{background:#0a0a0e;color:#8f8e99;padding:52px 0 26px;font-size:13px}
+.jphl-foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #1e1e26}
+.jphl-foot-brand .jphl-logo-text{color:#fff}
+.jphl-foot-brand p{font-size:12.5px;color:#7d7c87;margin-top:12px;line-height:1.85;max-width:320px}
+.jphl-foot-col h4{font-size:13px;color:#e3e2e8;font-weight:800;margin-bottom:12px;letter-spacing:.04em}
+.jphl-foot-col li{margin-bottom:8px;font-size:12.5px}
+.jphl-foot-col a:hover{color:#fff}
+.jphl-foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:12px;color:#6a6975}
+
+/* toast + 弹窗 + 回到顶部 */
+.jphl-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);background:var(--jphl-ink);
+  color:#fff;font-size:13px;padding:11px 22px;border-radius:999px;opacity:0;pointer-events:none;
+  transition:.3s;z-index:400;box-shadow:0 14px 30px -14px rgba(0,0,0,.7);
+}
+.jphl-toast.show{opacity:1;transform:translate(-50%,0)}
+.jphl-modal{
+  position:fixed;inset:0;background:rgba(8,8,12,.62);z-index:300;display:none;
+  align-items:center;justify-content:center;padding:20px;
+}
+.jphl-modal.open{display:flex}
+.jphl-modal-box{
+  background:#fff;border-radius:16px;max-width:460px;width:100%;padding:26px 24px;
+  max-height:86vh;overflow:auto;position:relative;
+}
+.jphl-modal-box h3{font-size:18px;font-weight:900;padding-right:30px}
+.jphl-modal-box p{font-size:13px;color:#6e6d76;line-height:1.85;margin-top:10px}
+.jphl-modal-close{position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;background:#f1efec;font-size:15px;color:#57565f;display:grid;place-items:center}
+.jphl-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.jphl-share-row button{
+  border:1px solid #ddd9d3;border-radius:999px;padding:8px 16px;font-size:12.5px;font-weight:600;color:#44434c;transition:.2s;
+}
+.jphl-share-row button:hover{background:var(--jphl-ink);color:#fff;border-color:var(--jphl-ink)}
+.jphl-totop{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--jphl-ink);color:#fff;display:grid;place-items:center;z-index:200;
+  opacity:0;pointer-events:none;transition:.3s;box-shadow:0 12px 26px -14px rgba(0,0,0,.8);
+}
+.jphl-totop.show{opacity:1;pointer-events:auto}
+.jphl-totop:hover{background:var(--jphl-red)}
+
+.jphl-noresult{
+  display:none;padding:22px;text-align:center;background:#fdeaea;border:1px dashed #e8a6a8;
+  border-radius:12px;color:#a4272b;font-size:13.5px;margin-bottom:20px;
+}
+.jphl-noresult.show{display:block}
+.jphl-searchbar{display:flex;gap:10px;max-width:460px;margin-bottom:22px}
+.jphl-searchbar input{
+  flex:1;border:1px solid #ddd9d3;border-radius:999px;padding:10px 18px;font-size:14px;outline:none;background:#fff;
+}
+.jphl-searchbar input:focus{border-color:var(--jphl-red)}
+.jphl-searchbar button{background:var(--jphl-red);color:#fff;border-radius:999px;padding:0 22px;font-weight:700;font-size:13.5px}
+
+@media (max-width:1024px){
+  .jphl-hero .jphl-wrap{grid-template-columns:1fr;gap:38px}
+  .jphl-hero-visual{max-width:560px}
+  .jphl-creators{grid-template-columns:repeat(2,1fr)}
+  .jphl-videoflow{grid-template-columns:repeat(2,1fr)}
+  .jphl-topics{grid-template-columns:repeat(2,1fr)}
+  .jphl-reviews{grid-template-columns:repeat(2,1fr)}
+  .jphl-rank{grid-template-columns:repeat(2,1fr)}
+  .jphl-partners{grid-template-columns:repeat(3,1fr)}
+  .jphl-foot-top{grid-template-columns:1fr 1fr}
+  .jphl-contact .jphl-wrap{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .jphl-nav,.jphl-header-tools .jphl-search{display:none}
+  .jphl-burger{display:grid;place-items:center;margin-left:auto}
+  .jphl-header .jphl-wrap{gap:12px}
+  .jphl-focus-grid,.jphl-smalllist,.jphl-stories,.jphl-idea,.jphl-news{grid-template-columns:1fr}
+  .jphl-sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .jphl-section{padding:54px 0}
+  .jphl-hero{padding:46px 0 54px}
+  html{scroll-padding-top:104px}
+}
+@media (max-width:600px){
+  .jphl-videoflow,.jphl-creators,.jphl-topics,.jphl-reviews,.jphl-rank{grid-template-columns:1fr}
+  .jphl-vcard{grid-template-columns:120px 1fr}
+  .jphl-partners{grid-template-columns:repeat(2,1fr)}
+  .jphl-hero-stats{gap:22px}
+  .jphl-foot-top{grid-template-columns:1fr}
+  .jphl-hero-float{position:static;margin-top:16px;max-width:100%}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="jphl-stickyhead">
+  <!-- 公告条 -->
+  <div class="jphl-notice">
+    <div class="jphl-wrap">
+      <span class="jphl-notice-tag">官方发布</span>
+      <div class="jphl-notice-track">
+        <span>2026 冬季新企划《城市暗涌》系列已上线 6 集 · 创作者大赛报名通道开放至 12 月 5 日 · 企业动态：新版创作者后台正式启用 · 内容生态周报第 42 期发布</span>
+      </div>
+      <a href="#jphl-faq">查看详情</a>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="jphl-header">
+    <div class="jphl-wrap">
+      <a class="jphl-logo" href="#jphl-home">
+        <span class="jphl-logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4l13 8-13 8z" fill="#fff"/></svg>
+        </span>
+        <span class="jphl-logo-text">极品黑料网<small>JIPIN HEILIAO</small></span>
+      </a>
+      <nav class="jphl-nav" aria-label="主导航">
+        <a href="#jphl-home">首页</a>
+        <a href="#jphl-focus">影像焦点</a>
+        <a href="#jphl-topics">专题企划</a>
+        <a href="#jphl-creators">创作者</a>
+        <a href="#jphl-news">企业动态</a>
+        <a href="#jphl-faq">帮助</a>
+        <a href="#jphl-contact">联系</a>
+      </nav>
+      <div class="jphl-header-tools">
+        <form class="jphl-search" id="jphlTopSearch" role="search">
+          <input type="text" id="jphlTopInput" placeholder="搜索影像、专题、创作者" aria-label="站内搜索">
+          <button type="submit" aria-label="搜索">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <button class="jphl-burger" id="jphlBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 移动端导航 -->
+  <div class="jphl-mobile-nav" id="jphlMobileNav">
+    <form class="jphl-msearch" id="jphlMobileSearch">
+      <input type="text" id="jphlMobileInput" placeholder="搜索影像、专题、创作者" aria-label="移动端搜索">
+      <button type="submit">搜索</button>
+    </form>
+    <ul>
+      <li><a href="#jphl-home">首页</a></li>
+      <li><a href="#jphl-focus">影像焦点</a></li>
+      <li><a href="#jphl-topics">专题企划</a></li>
+      <li><a href="#jphl-creators">创作者</a></li>
+      <li><a href="#jphl-news">企业动态</a></li>
+      <li><a href="#jphl-faq">帮助</a></li>
+      <li><a href="#jphl-contact">联系</a></li>
+    </ul>
+  </div>
+</div>
+
+<main id="jphl-home">
+
+  <!-- 首屏 -->
+  <section class="jphl-hero">
+    <div class="jphl-wrap">
+      <div>
+        <span class="jphl-hero-eyebrow">官方网站 · 品牌影像平台</span>
+        <h1>极品黑料网</h1>
+        <p class="jphl-hero-lead">把真实故事拍成可被看见的力量，一个持续运营的原创影像品牌与创作者社区。</p>
+        <p class="jphl-hero-desc">极品黑料网官方网站深耕多元影像内容这一垂直领域，以企业级内容生态为底座，聚合原创作者、精品内容与深度专题。我们坚持正版、高清、专业的制作标准，相信每一段朴素的记录都值得被认真对待。</p>
+        <div class="jphl-hero-stats">
+          <div><b>3200<span>+</span></b><i>原创影像作品</i></div>
+          <div><b>186<span>万</span></b><i>社区创作者与用户</i></div>
+          <div><b>9<span>年</span></b><i>品牌持续运营</i></div>
+        </div>
+        <div class="jphl-hero-btns">
+          <a class="jphl-btn jphl-btn-main" href="#jphl-focus">进入影像焦点</a>
+          <a class="jphl-btn jphl-btn-ghost" href="#jphl-contact">投稿与报名</a>
+          <a class="jphl-btn jphl-btn-ghost" href="#jphl-creators">认识创作者</a>
+        </div>
+      </div>
+      <div class="jphl-hero-visual">
+        <div class="jphl-hero-figure">
+          <span class="jphl-hero-badge">品牌主视觉 · 真实影像</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2317171f'/%3E%3Cstop offset='1' stop-color='%230d0d12'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8232a'/%3E%3Cstop offset='1' stop-color='%237c1015'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='110' r='150' fill='%23e8232a' opacity='0.16'/%3E%3Ccircle cx='160' cy='400' r='190' fill='%232b6cff' opacity='0.1'/%3E%3Cpath d='M0 340 L200 210 L340 300 L520 160 L800 320 L800 500 L0 500 Z' fill='%23202029' opacity='0.9'/%3E%3Cpath d='M0 400 L180 300 L380 370 L600 260 L800 380 L800 500 L0 500 Z' fill='%23181820'/%3E%3Crect x='90' y='120' width='260' height='160' rx='10' fill='url(%23g2)' opacity='0.85'/%3E%3Cpath d='M180 165 L275 200 L180 235 Z' fill='%23ffffff' opacity='0.92'/%3E%3Crect x='430' y='150' width='250' height='14' rx='7' fill='%23ffffff' opacity='0.5'/%3E%3Crect x='430' y='182' width='190' height='11' rx='5' fill='%23ffffff' opacity='0.3'/%3E%3Crect x='430' y='208' width='220' height='11' rx='5' fill='%23ffffff' opacity='0.22'/%3E%3C/svg%3E" alt="极品黑料网品牌主视觉：暗色城市剪影与红色播放标识">
+        </div>
+        <div class="jphl-hero-float">
+          <span class="jphl-avatar jphl-av-1">陆</span>
+          <div><b>本周品牌推荐作者</b><small>陆声 · 城市影像记录者</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词深度解析 -->
+  <section class="jphl-section jphl-section-alt" id="jphl-about">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">品牌解析</span>
+          <h2>关于 <span>极品黑料网</span> · 一个影像品牌的定位与解读</h2>
+          <p>从名字到内容生态，我们如何理解自己在做的事，以及希望被谁看见。</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:start" class="jphl-about-grid">
+        <div style="font-size:14.5px;color:#57565f;line-height:2">
+          <p><b>极品黑料网</b>不是一个追逐噱头的名字，而是一次自我提醒：所谓“黑料”，在我们这里指向的是被日常掩盖的粗粝真实——那些未经修饰的现场、不加滤镜的情绪、不够体面的窘迫，以及恰因不完美而动人的片段。作为一家持续运营九年的影像品牌，我们选择把镜头对准这些“极品”的瞬间，用专业与匠心把它们整理成可以被反复观看的精品内容。</p>
+          <p>作为<i style="font-style:normal;color:#a4272b">极品黑料网官方网站</i>，这里承担着品牌发布、作品归档、创作者档案、企业动态与社区互动的全部职能。我们不做无差别的内容聚合，而是在多元题材中建立清晰的编辑逻辑：真实优先于戏剧，细节优先于结论，人的处境优先于流量。九年来，平台累计沉淀原创影像作品三千两百余部，覆盖城市探索、人物访谈、生活方式、手作工艺、健康运动、科技前沿等十余个方向，形成了一套属于我们自己的影像语言。</p>
+          <p>内容生态的健康来自双向的克制。对创作者，我们提供清晰的投稿指南、版权说明与分级激励，鼓励长期主义：一支短片可以拍三个月，一篇访谈可以磨六稿。对观众，我们坚持少打扰、慢更新、可检索的浏览体验，让好内容在时间中自然长出口碑。这也是我们理解“值得信赖”的方式——不承诺爆款，只承诺每一次发布都经过审片与校对，每一条企业动态都如实记录。</p>
+          <p>在品牌故事之外，我们也认真处理作为企业的社会责任。平台与地方文化机构、青年影像社团保持长期合作，每年开放创作扶持名额，为刚起步的创作者提供器材、场地与指导。我们相信包容不是口号，而是把机会给到那些还没有被看见的人。成长与陪伴，是这家企业最想留下的两个词。</p>
+          <p>未来，极品黑料网会继续在垂直领域深耕，把“真实、温暖、有力量”作为内容判断的第一标准，在商业合作与内容品质之间守住边界。我们希望当人们提起这个品牌时，想到的不是某一次传播，而是一种稳定的观看习惯：想看见真实的人，就来这里。</p>
+        </div>
+        <div style="background:#f7f5f2;border:1px solid #e4e0da;border-radius:15px;padding:24px">
+          <h3 style="font-size:15px;font-weight:800;margin-bottom:14px">品牌关键词速览</h3>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px">
+            <li class="jphl-chip jphl-chip-red">官方网站</li>
+            <li class="jphl-chip">高清影像</li>
+            <li class="jphl-chip">原创内容</li>
+            <li class="jphl-chip">创作者社区</li>
+            <li class="jphl-chip">企业动态</li>
+            <li class="jphl-chip jphl-chip-red">正版授权</li>
+            <li class="jphl-chip">内容生态</li>
+            <li class="jphl-chip">人物访谈</li>
+            <li class="jphl-chip">城市探索</li>
+            <li class="jphl-chip">手作工艺</li>
+            <li class="jphl-chip">品牌故事</li>
+            <li class="jphl-chip">持续运营</li>
+          </ul>
+          <div style="border-top:1px dashed #ddd9d3;margin-top:18px;padding-top:16px;font-size:12.5px;color:#6e6d76;line-height:1.85">
+            内容审核：双人复核制<br>
+            更新节奏：每周三、周六<br>
+            品牌口号：把真实拍成力量
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="jphl-section" id="jphl-focus">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">影像焦点</span>
+          <h2>本期精选 · <span>值得完整看完的六部作品</span></h2>
+          <p>编辑组从近三个月的新发布中挑出的重点推荐，题材各异，共同点是扎实。</p>
+        </div>
+        <a class="jphl-more" href="#jphl-flow">浏览全部影像</a>
+      </div>
+
+      <div class="jphl-focus-grid">
+        <article class="jphl-focus-card" data-title="夜班公交司机的最后三站">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">人物访谈</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%2314182b'/%3E%3Ccircle cx='650' cy='90' r='110' fill='%23ffc46b' opacity='0.22'/%3E%3Crect x='0' y='300' width='800' height='150' fill='%230c101e'/%3E%3Crect x='110' y='180' width='330' height='150' rx='14' fill='%232a3a5c'/%3E%3Crect x='135' y='205' width='110' height='70' rx='6' fill='%23ffd98a' opacity='0.75'/%3E%3Crect x='265' y='205' width='150' height='70' rx='6' fill='%23ffd98a' opacity='0.5'/%3E%3Ccircle cx='180' cy='345' r='24' fill='%230a0d18'/%3E%3Ccircle cx='380' cy='345' r='24' fill='%230a0d18'/%3E%3Crect x='470' y='250' width='16' height='110' fill='%23394a6e'/%3E%3Crect x='440' y='238' width='76' height='12' rx='6' fill='%235c7099'/%3E%3C/svg%3E" alt="夜班公交司机的最后三站：夜间公交车与车灯的城市影像">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"/><path d="M9.5 7.5l7 4.5-7 4.5z" fill="#fff"/></svg></div>
+            <div class="jphl-cover-meta"><span>成片 24:10</span><span>高清 · 正版</span></div>
+          </div>
+          <div class="jphl-focus-body">
+            <h3>夜班公交司机的最后三站</h3>
+            <p>跟车 11 个夜晚，记录一位在末班线上开了十九年的司机。他不谈辛苦，只反复说“人要准时”。</p>
+            <div class="jphl-card-foot">
+              <span class="jphl-avatar jphl-av-1">陆</span>
+              <b>陆声</b><span>·</span><span>2026-11-08</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-focus-card" data-title="老巷里的第七家裁缝铺">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">手作工艺</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23f0e3cf'/%3E%3Crect x='0' y='330' width='800' height='120' fill='%23d8c3a2'/%3E%3Crect x='80' y='90' width='290' height='240' rx='8' fill='%23b98d5b'/%3E%3Crect x='100' y='110' width='250' height='200' fill='%23f6ecdb'/%3E%3Ccircle cx='225' cy='180' r='34' fill='%23c0392b' opacity='0.85'/%3E%3Cpath d='M195 240 L255 240 L245 300 L205 300 Z' fill='%238a5b2e'/%3E%3Crect x='420' y='150' width='230' height='14' rx='7' fill='%238a6a45'/%3E%3Crect x='420' y='186' width='170' height='12' rx='6' fill='%238a6a45' opacity='0.7'/%3E%3Crect x='420' y='220' width='200' height='12' rx='6' fill='%238a6a45' opacity='0.55'/%3E%3Crect x='420' y='262' width='120' height='70' rx='6' fill='%23c9a87c'/%3E%3C/svg%3E" alt="老巷里的第七家裁缝铺：暖色老屋与缝纫机的工作台">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"/><path d="M9.5 7.5l7 4.5-7 4.5z" fill="#fff"/></svg></div>
+            <div class="jphl-cover-meta"><span>成片 18:42</span><span>高清 · 正版</span></div>
+          </div>
+          <div class="jphl-focus-body">
+            <h3>老巷里的第七家裁缝铺</h3>
+            <p>巷子拆到第七家时，剩下一位仍在改衣服的师傅。镜头量了他的手，也量了一条街的长度。</p>
+            <div class="jphl-card-foot">
+              <span class="jphl-avatar jphl-av-4">苏</span>
+              <b>苏木手作</b><span>·</span><span>2026-10-30</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="jphl-smalllist">
+        <article class="jphl-vcard" data-title="十二楼的阳台菜园，第三年">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">生活方式</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23dff0e0'/%3E%3Crect x='0' y='200' width='400' height='100' fill='%23b9d8b8'/%3E%3Crect x='40' y='150' width='90' height='70' rx='6' fill='%238fbc8e'/%3E%3Crect x='160' y='130' width='80' height='90' rx='6' fill='%236ea56d'/%3E%3Crect x='270' y='160' width='100' height='60' rx='6' fill='%2397c495'/%3E%3Ccircle cx='85' cy='140' r='20' fill='%23e05a4f'/%3E%3Ccircle cx='200' cy='118' r='16' fill='%23f0a63a'/%3E%3Cpath d='M300 160 L330 120 L360 160 Z' fill='%232f6b3a'/%3E%3C/svg%3E" alt="十二楼的阳台菜园：高层阳台上的绿植与番茄盆栽">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-vcard-body">
+            <h3>十二楼的阳台菜园，第三年</h3>
+            <p>一个从不施肥的阳台，如何在三年后收出足以送人的菜。</p>
+            <div class="jphl-vcard-tags"><span class="jphl-chip jphl-chip-red">日常记录</span><span class="jphl-chip">经验分享</span></div>
+          </div>
+        </article>
+
+        <article class="jphl-vcard" data-title="在废弃仓库里做一台木制放映机">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">手作DIY</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23ece4d6'/%3E%3Crect x='0' y='230' width='400' height='70' fill='%23cfc1a8'/%3E%3Crect x='90' y='90' width='220' height='140' rx='10' fill='%23936c44'/%3E%3Crect x='115' y='115' width='100' height='90' rx='6' fill='%231e1e24'/%3E%3Ccircle cx='250' cy='160' r='30' fill='%23b88a58'/%3E%3Ccircle cx='250' cy='160' r='13' fill='%23ffcc66'/%3E%3Crect x='130' y='230' width='20' height='30' fill='%2367472a'/%3E%3Crect x='250' y='230' width='20' height='30' fill='%2367472a'/%3E%3C/svg%3E" alt="在废弃仓库里做一台木制放映机：木质机身与镜头特写">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-vcard-body">
+            <h3>在废弃仓库里做一台木制放映机</h3>
+            <p>从一个旧齿轮开始，用 47 天做出能转动的手工放映机。</p>
+            <div class="jphl-vcard-tags"><span class="jphl-chip jphl-chip-red">创作幕后</span><span class="jphl-chip">手作</span></div>
+          </div>
+        </article>
+
+        <article class="jphl-vcard" data-title="跑过一条河的三座桥">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">健康运动</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231b2b3d'/%3E%3Ccircle cx='320' cy='70' r='40' fill='%23f2c14e' opacity='0.55'/%3E%3Crect x='0' y='210' width='400' height='90' fill='%230f1c2b'/%3E%3Cpath d='M0 220 Q100 190 200 220 T400 220 L400 250 L0 250 Z' fill='%23223a52'/%3E%3Crect x='70' y='170' width='10' height='50' fill='%234b6a8a'/%3E%3Crect x='140' y='160' width='10' height='60' fill='%234b6a8a'/%3E%3Crect x='210' y='170' width='10' height='50' fill='%234b6a8a'/%3E%3Cpath d='M60 178 L240 178 L220 166 L80 166 Z' fill='%235b83a8'/%3E%3C/svg%3E" alt="跑过一条河的三座桥：夜色河面与三座桥的轮廓">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-vcard-body">
+            <h3>跑过一条河的三座桥</h3>
+            <p>凌晨四点出发，用脚步串起城市的三座桥，心率与城市一起醒来。</p>
+            <div class="jphl-vcard-tags"><span class="jphl-chip jphl-chip-red">城市探索</span><span class="jphl-chip">运动</span></div>
+          </div>
+        </article>
+
+        <article class="jphl-vcard" data-title="把一把旧椅子修回它出生的样子">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">实用技巧</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e8e2d8'/%3E%3Crect x='0' y='240' width='400' height='60' fill='%23c9c0b0'/%3E%3Crect x='130' y='120' width='140' height='120' rx='8' fill='%23a6794c'/%3E%3Crect x='110' y='110' width='180' height='18' rx='9' fill='%238d6238'/%3E%3Crect x='145' y='240' width='14' height='40' fill='%237a522c'/%3E%3Crect x='240' y='240' width='14' height='40' fill='%237a522c'/%3E%3Crect x='120' y='92' width='60' height='18' rx='4' fill='%23c0392b' opacity='0.7'/%3E%3C/svg%3E" alt="把一把旧椅子修回它出生的样子：木椅与修补工具的桌面">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-vcard-body">
+            <h3>把一把旧椅子修回它出生的样子</h3>
+            <p>从去漆到上蜡，八道工序完整展示，附材料清单与常见误操作。</p>
+            <div class="jphl-vcard-tags"><span class="jphl-chip jphl-chip-red">教程干货</span><span class="jphl-chip">家居</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 + 搜索筛选 -->
+  <section class="jphl-section jphl-section-alt" id="jphl-flow">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">社区热门</span>
+          <h2>社区热门影像 · <span>本周持续上升的九部</span></h2>
+          <p>热度不是唯一标准，但值得知道大家在讨论什么。</p>
+        </div>
+      </div>
+
+      <form class="jphl-searchbar" id="jphlFlowSearch">
+        <input type="text" id="jphlFlowInput" placeholder="在热门影像中搜索，例如：城市、手作、访谈" aria-label="热门影像搜索">
+        <button type="submit">筛选</button>
+      </form>
+      <div class="jphl-noresult" id="jphlNoResult">没有匹配的影像，换个关键词试试。</div>
+
+      <div class="jphl-videoflow" id="jphlFlowGrid">
+        <article class="jphl-vc" data-title="凌晨四点的面馆，一天只做六十碗" data-tags="美食 城市探索">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">美食</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f5e6cf'/%3E%3Crect x='0' y='170' width='400' height='55' fill='%23d9c2a0'/%3E%3Ccircle cx='200' cy='120' r='62' fill='%23ffffff'/%3E%3Ccircle cx='200' cy='120' r='48' fill='%23f0c477'/%3E%3Cpath d='M160 105 Q200 80 240 105' stroke='%23c98f3c' stroke-width='6' fill='none'/%3E%3Crect x='60' y='70' width='12' height='90' rx='6' fill='%238d6238'/%3E%3Crect x='330' y='70' width='12' height='90' rx='6' fill='%238d6238'/%3E%3C/svg%3E" alt="凌晨四点的面馆：白色瓷碗与热气腾腾的面条">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>12:36</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>凌晨四点的面馆，一天只做六十碗</h3>
+            <p>老板守了二十三年，把限量做成习惯。我们去吃了最后三碗。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-3">林</span><b>林间食记</b><span>· 3.1 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="312"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>312</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="给旧毛衣第二次机会：拆线与重织" data-tags="手作 生活">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">手作</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23efe6ec'/%3E%3Cpath d='M0 160 Q100 120 200 160 T400 160 L400 225 L0 225 Z' fill='%23d7c3d0'/%3E%3Ccircle cx='120' cy='110' r='46' fill='%23b56b8f' opacity='0.85'/%3E%3Ccircle cx='230' cy='100' r='54' fill='%238a4f73' opacity='0.8'/%3E%3Ccircle cx='320' cy='120' r='36' fill='%23c98aae' opacity='0.85'/%3E%3Cpath d='M70 160 Q120 130 180 160 T300 160' stroke='%23ffffff' stroke-width='4' fill='none' opacity='0.6'/%3E%3C/svg%3E" alt="给旧毛衣第二次机会：毛线团与拆线工具">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>16:02</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>给旧毛衣第二次机会：拆线与重织</h3>
+            <p>一件不想丢的毛衣，如何变成围巾和一整段周末的心情。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-4">苏</span><b>苏木手作</b><span>· 2.6 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="248"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>248</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="拍一条三分钟的短片，我们改了十四版脚本" data-tags="创作幕后 访谈">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">创作幕后</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23202028'/%3E%3Crect x='40' y='40' width='320' height='145' rx='8' fill='%23141419' stroke='%233b3b46'/%3E%3Crect x='60' y='60' width='160' height='10' rx='5' fill='%23e8232a' opacity='0.8'/%3E%3Crect x='60' y='84' width='250' height='8' rx='4' fill='%23ffffff' opacity='0.4'/%3E%3Crect x='60' y='104' width='210' height='8' rx='4' fill='%23ffffff' opacity='0.3'/%3E%3Crect x='60' y='124' width='270' height='8' rx='4' fill='%23ffffff' opacity='0.22'/%3E%3Crect x='60' y='144' width='150' height='8' rx='4' fill='%23ffffff' opacity='0.16'/%3E%3C/svg%3E" alt="创作幕后：电脑屏幕上的脚本修改稿与场记板">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>21:18</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>拍一条三分钟的短片，我们改了十四版脚本</h3>
+            <p>从分镜到杀青，全过程与预算明细，适合第一次拍片的你。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-2">徐</span><b>徐果工作室</b><span>· 4.4 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="486"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>486</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="在老城区找一堵会讲故事的墙" data-tags="城市探索 文化">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">城市探索</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23c9d3d9'/%3E%3Crect x='0' y='150' width='400' height='75' fill='%2398a7b2'/%3E%3Crect x='30' y='40' width='120' height='120' fill='%23d9c6a5'/%3E%3Crect x='165' y='20' width='100' height='140' fill='%23b8a284'/%3E%3Crect x='280' y='55' width='95' height='105' fill='%23cbb99c'/%3E%3Crect x='50' y='70' width='34' height='34' fill='%233e4b57'/%3E%3Crect x='185' y='50' width='28' height='30' fill='%233e4b57'/%3E%3Crect x='235' y='50' width='28' height='30' fill='%233e4b57'/%3E%3Cpath d='M0 195 L400 195' stroke='%2378899a' stroke-width='3'/%3E%3C/svg%3E" alt="老城区会讲故事的墙：斑驳墙皮与窗棂的街景">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>19:44</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>在老城区找一堵会讲故事的墙</h3>
+            <p>墙面上的刻字、补丁和粉笔字，是被忽略的城市档案。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-1">陆</span><b>陆声</b><span>· 5.2 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="612"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>612</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="从零学剪辑：三个动作让画面稳下来" data-tags="教程 科技">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">教程干货</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23131824'/%3E%3Crect x='30' y='30' width='210' height='165' rx='8' fill='%230c1119' stroke='%23283648'/%3E%3Crect x='50' y='55' width='120' height='8' rx='4' fill='%234d7bd6'/%3E%3Crect x='50' y='75' width='160' height='8' rx='4' fill='%233f5d9e'/%3E%3Crect x='50' y='95' width='90' height='30' rx='4' fill='%2324406b'/%3E%3Crect x='150' y='95' width='60' height='30' rx='4' fill='%231f3a60'/%3E%3Crect x='50' y='135' width='170' height='6' rx='3' fill='%23384e73'/%3E%3Crect x='260' y='45' width='110' height='135' rx='8' fill='%231a2233'/%3E%3Crect x='278' y='65' width='74' height='8' rx='4' fill='%23ffffff' opacity='0.4'/%3E%3Crect x='278' y='85' width='55' height='8' rx='4' fill='%23ffffff' opacity='0.26'/%3E%3Crect x='278' y='105' width='70' height='8' rx='4' fill='%23ffffff' opacity='0.2'/%3E%3C/svg%3E" alt="剪辑教学：时间线界面与参数面板">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>14:25</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>从零学剪辑：三个动作让画面稳下来</h3>
+            <p>不靠设备，只用剪辑逻�辑与运镜习惯，解决九成的手抖观感。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-3">林</span><b>林间食记</b><span>· 6.8 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="834"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>834</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="一间只有六平方米的书店，开了十一年" data-tags="人物访谈 文化">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">人物访谈</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e8dcc8'/%3E%3Crect x='0' y='175' width='400' height='50' fill='%23c5b193'/%3E%3Crect x='40' y='25' width='320' height='150' fill='%238a6f4e'/%3E%3Crect x='55' y='40' width='290' height='26' fill='%23e5d4b5'/%3E%3Crect x='55' y='76' width='290' height='26' fill='%23d9c5a3'/%3E%3Crect x='55' y='112' width='290' height='26' fill='%23e5d4b5'/%3E%3Crect x='55' y='148' width='290' height='14' fill='%23cbb68f'/%3E%3Crect x='75' y='44' width='14' height='18' fill='%23a33a3a'/%3E%3Crect x='180' y='44' width='14' height='18' fill='%233a5aa3'/%3E%3Crect x='260' y='118' width='14' height='18' fill='%233a7a4a'/%3E%3C/svg%3E" alt="六平方米书店：书架与旧书脊的暖色内景">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>22:07</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>一间只有六平方米的书店，开了十一年</h3>
+            <p>店主说，亏欠房租的那三年，是街坊替他撑住的。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-5">周</span><b>周野访谈</b><span>· 3.9 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="452"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>452</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="雨天的猫，和一条不肯挪窝的长椅" data-tags="萌宠 治愈">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">萌宠</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23b9c7cc'/%3E%3Crect x='0' y='165' width='400' height='60' fill='%2384959b'/%3E%3Crect x='60' y='130' width='280' height='20' rx='6' fill='%23677a80'/%3E%3Cellipse cx='210' cy='112' rx='52' ry='34' fill='%23e4e0d8'/%3E%3Ccircle cx='210' cy='82' r='30' fill='%23e4e0d8'/%3E%3Cpath d='M190 60 L184 40 L204 54 Z' fill='%23e4e0d8'/%3E%3Cpath d='M230 60 L236 40 L216 54 Z' fill='%23e4e0d8'/%3E%3Ccircle cx='200' cy='82' r='4' fill='%23343a3d'/%3E%3Ccircle cx='220' cy='82' r='4' fill='%23343a3d'/%3E%3Cpath d='M0 40 L10 70 L20 40 L30 70 L40 40 L50 70' stroke='%23ffffff' stroke-width='2' opacity='0.5' fill='none'/%3E%3C/svg%3E" alt="雨天的猫与长椅：灰蓝雨幕中的白猫剪影">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>09:48</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>雨天的猫，和一条不肯挪窝的长椅</h3>
+            <p>我们连续拍了四个雨天，它始终占着同一个位置。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-6">许</span><b>许一只</b><span>· 7.5 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="921"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>921</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="把十年前的旧相机重新带去旅行" data-tags="科技 测评 旅行">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">深度测评</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23d8d3c6'/%3E%3Crect x='0' y='170' width='400' height='55' fill='%23b4ad9c'/%3E%3Crect x='110' y='70' width='180' height='100' rx='10' fill='%23313740'/%3E%3Ccircle cx='200' cy='120' r='36' fill='%23161b22'/%3E%3Ccircle cx='200' cy='120' r='22' fill='%233b4754'/%3E%3Ccircle cx='200' cy='120' r='9' fill='%238fa1b3'/%3E%3Crect x='240' y='80' width='34' height='14' rx='4' fill='%23555f6b'/%3E%3Crect x='125' y='82' width='26' height='10' rx='3' fill='%23c0392b'/%3E%3C/svg%3E" alt="旧相机旅行测评：复古相机与旅行桌面">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>17:33</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>把十年前的旧相机重新带去旅行</h3>
+            <p>参数落后但成片有味道，一次诚实的旧器材实测记录。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-2">徐</span><b>徐果工作室</b><span>· 2.2 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="298"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>298</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jphl-vc" data-title="深夜练琴的人，和他窗外的城市" data-tags="音乐 人物">
+          <div class="jphl-cover">
+            <span class="jphl-cover-tag">音乐现场</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%2314101e'/%3E%3Crect x='230' y='20' width='150' height='185' fill='%23241c33'/%3E%3Crect x='248' y='40' width='44' height='44' fill='%23f2c14e' opacity='0.5'/%3E%3Crect x='306' y='40' width='44' height='44' fill='%23f2c14e' opacity='0.3'/%3E%3Crect x='248' y='100' width='44' height='44' fill='%23f2c14e' opacity='0.22'/%3E%3Crect x='72' y='80' width='96' height='16' rx='8' fill='%23d8c9a8'/%3E%3Crect x='60' y='96' width='120' height='10' rx='5' fill='%23b7a988'/%3E%3Crect x='66' y='106' width='6' height='60' fill='%23b7a988'/%3E%3Crect x='168' y='106' width='6' height='60' fill='%23b7a988'/%3E%3Crect x='60' y='166' width='120' height='8' rx='4' fill='%23908060'/%3E%3C/svg%3E" alt="深夜练琴的人：钢琴剪影与亮着灯的窗">
+            <div class="jphl-cover-shade"></div>
+            <div class="jphl-cover-meta"><span>13:12</span><span>高清</span></div>
+          </div>
+          <div class="jphl-vc-body">
+            <h3>深夜练琴的人，和他窗外的城市</h3>
+            <p>一个非职业乐手，十年只练一首曲子，弹给楼下的自己听。</p>
+            <div class="jphl-vc-author"><span class="jphl-avatar jphl-av-5">周</span><b>周野访谈</b><span>· 4.1 万播放</span></div>
+            <div class="jphl-vc-actions">
+              <button class="jphl-act jphl-like" data-count="367"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 01-1-1v-7a1 1 0 011-1h3zm3 9h7a2 2 0 002-2l1-5a2 2 0 00-2-2h-4l1-4a2 2 0 00-2-2l-4 6v9z"/></svg><span>367</span></button>
+              <button class="jphl-act jphl-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>收藏</button>
+              <span class="jphl-flexsp"></span>
+              <button class="jphl-act jphl-comment">评论</button>
+              <button class="jphl-act jphl-share">分享</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="jphl-section" id="jphl-topics">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">专题企划</span>
+          <h2>专题企划 · <span>围绕一个问题的系列影像</span></h2>
+          <p>每一季我们选定一个母题，用多部作品从不同角度靠近它。</p>
+        </div>
+      </div>
+      <div class="jphl-topics">
+        <article class="jphl-topic" data-title="城市暗涌 · 冬季特别企划">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23131824'/%3E%3Ccircle cx='300' cy='60' r='70' fill='%23e8232a' opacity='0.18'/%3E%3Crect x='30' y='90' width='70' height='160' fill='%231c2433'/%3E%3Crect x='110' y='60' width='60' height='190' fill='%23222c3c'/%3E%3Crect x='180' y='110' width='80' height='140' fill='%231a2230'/%3E%3Crect x='270' y='80' width='100' height='170' fill='%23202a3a'/%3E%3Crect x='46' y='108' width='16' height='16' fill='%23ffd98a' opacity='0.6'/%3E%3Crect x='124' y='80' width='14' height='14' fill='%23ffd98a' opacity='0.45'/%3E%3Crect x='196' y='130' width='18' height='18' fill='%23ffd98a' opacity='0.4'/%3E%3Crect x='292' y='100' width='20' height='20' fill='%23ffd98a' opacity='0.5'/%3E%3C/svg%3E" alt="城市暗涌专题：夜色楼群与零星亮灯的窗户">
+          <div class="jphl-topic-body">
+            <h3>城市暗涌 · 冬季特别企划</h3>
+            <p>我们走进城市不亮的那些角落：夜班、地下通道、凌晨的批发市场。</p>
+            <span class="jphl-topic-status"><span class="jphl-dot"></span>已更新至第 6 集 · 连载中</span>
+          </div>
+        </article>
+
+        <article class="jphl-topic" data-title="手上的时间 · 手作人系列">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23efe4d2'/%3E%3Crect x='0' y='190' width='400' height='60' fill='%23d6c3a4'/%3E%3Crect x='60' y='90' width='130' height='100' rx='8' fill='%23b08756'/%3E%3Crect x='80' y='112' width='90' height='12' rx='6' fill='%23f3e8d6'/%3E%3Crect x='80' y='136' width='70' height='10' rx='5' fill='%23f3e8d6' opacity='0.7'/%3E%3Ccircle cx='290' cy='110' r='46' fill='%2382562f'/%3E%3Ccircle cx='290' cy='110' r='30' fill='%23f3e8d6'/%3E%3Cpath d='M290 92 L290 110 L304 118' stroke='%2382562f' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="手上的时间专题：木工台与手工钟表零件">
+          <div class="jphl-topic-body">
+            <h3>手上的时间 · 手作人系列</h3>
+            <p>六位手作人，六种慢下来的方式：木、布、陶、纸、漆、金属。</p>
+            <span class="jphl-topic-status"><span class="jphl-dot"></span>已上线 5 集 · 本季完结</span>
+          </div>
+        </article>
+
+        <article class="jphl-topic" data-title="第一次拍 · 新人创作者扶持">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%231a2234'/%3E%3Ccircle cx='200' cy='120' r='78' fill='none' stroke='%23e8232a' stroke-width='3' opacity='0.7'/%3E%3Ccircle cx='200' cy='120' r='54' fill='%23223252'/%3E%3Cpath d='M184 96 L228 120 L184 144 Z' fill='%23ffffff' opacity='0.9'/%3E%3Crect x='60' y='200' width='120' height='10' rx='5' fill='%234a628f'/%3E%3Crect x='220' y='200' width='120' height='10' rx='5' fill='%234a628f' opacity='0.6'/%3E%3C/svg%3E" alt="第一次拍专题：深蓝背景上的播放标记与扶持标识">
+          <div class="jphl-topic-body">
+            <h3>第一次拍 · 新人创作者扶持</h3>
+            <p>开放器材、场地与导师时间，只要求一件事：拍完你真正想拍的。</p>
+            <span class="jphl-topic-status"><span class="jphl-dot"></span>报名进行中 · 截止 12 月 5 日</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="jphl-section jphl-section-alt" id="jphl-creators">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">创作者矩阵</span>
+          <h2>在平台长期更新的 <span>六位创作者</span></h2>
+          <p>他们不追热点，只把一件事拍得越来越清楚。</p>
+        </div>
+      </div>
+      <div class="jphl-creators">
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-1">陆</span>
+          <h3>陆声</h3>
+          <div class="jphl-cr-field">城市探索 · 人物访谈</div>
+          <p>跟拍型创作者，擅长在人流里找到不被注意的固定点，一支片子常拍三个月。</p>
+          <div class="jphl-cr-meta"><span><b>86</b>作品</span><span><b>12.4万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="陆声" data-field="城市探索 · 人物访谈" data-desc="跟拍型创作者，2018 年入驻，代表作《夜班公交司机的最后三站》《老城区会讲故事的墙》。坚持不做摆拍，所有场景均在现场完成。">查看作者档案</button>
+        </article>
+
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-4">苏</span>
+          <h3>苏木手作</h3>
+          <div class="jphl-cr-field">手作工艺 · 家居改造</div>
+          <p>木作与织物双线更新，教程步骤完整，附材料清单，适合跟着做。</p>
+          <div class="jphl-cr-meta"><span><b>112</b>作品</span><span><b>9.8万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="苏木手作" data-field="手作工艺 · 家居改造" data-desc="手作类创作者，教程以可复现为标准，每条都附材料表与常见错误提示。运营着一间小型木工工作室。">查看作者档案</button>
+        </article>
+
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-2">徐</span>
+          <h3>徐果工作室</h3>
+          <div class="jphl-cr-field">创作幕后 · 深度测评</div>
+          <p>三人小团队，专注拍摄过程本身，预算表与踩坑记录从不省略。</p>
+          <div class="jphl-cr-meta"><span><b>64</b>作品</span><span><b>7.2万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="徐果工作室" data-field="创作幕后 · 深度测评" data-desc="影像制作团队，作品多为拍摄流程拆解与器材实测，强调成本与可执行性，是新人常看的工作室账号。">查看作者档案</button>
+        </article>
+
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-3">林</span>
+          <h3>林间食记</h3>
+          <div class="jphl-cr-field">美食烹饪 · 生活记录</div>
+          <p>拍小馆子和小厨房，不做浮夸摆盘，只讲一道菜为什么这样做。</p>
+          <div class="jphl-cr-meta"><span><b>98</b>作品</span><span><b>15.6万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="林间食记" data-field="美食烹饪 · 生活记录" data-desc="美食记录创作者，偏好市井小馆与家庭厨房，主张把做法讲清楚比画面好看更重要。">查看作者档案</button>
+        </article>
+
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-5">周</span>
+          <h3>周野访谈</h3>
+          <div class="jphl-cr-field">人物访谈 · 文化观察</div>
+          <p>访谈提问慢而准，常常一个问题问完后留足沉默。</p>
+          <div class="jphl-cr-meta"><span><b>47</b>作品</span><span><b>6.5万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="周野访谈" data-field="人物访谈 · 文化观察" data-desc="长访谈创作者，镜头以固定机位为主，重视被访者的语速与停顿，作品多见于书店、剧场与手艺人题材。">查看作者档案</button>
+        </article>
+
+        <article class="jphl-cr">
+          <span class="jphl-avatar jphl-av-6">许</span>
+          <h3>许一只</h3>
+          <div class="jphl-cr-field">萌宠日常 · 治愈影像</div>
+          <p>用极少的剪辑讲一个小动物的日常，看完会想下楼走走。</p>
+          <div class="jphl-cr-meta"><span><b>133</b>作品</span><span><b>18.1万</b>关注</span></div>
+          <button class="jphl-cr-btn jphl-author-btn" data-author="许一只" data-field="萌宠日常 · 治愈影像" data-desc="治愈向影像创作者，长期记录城市里的猫狗与它们占据的空间，主张不打扰地拍摄。">查看作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="jphl-section" id="jphl-stories">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">故事随笔</span>
+          <h2>幕后手记 · <span>影像之外的文字</span></h2>
+          <p>有些感受拍不尽，就写下来，作为作品的注脚。</p>
+        </div>
+      </div>
+      <div class="jphl-stories">
+        <article class="jphl-story">
+          <div class="jphl-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f2ede4'/%3E%3Crect x='0' y='170' width='400' height='55' fill='%23d9cfbe'/%3E%3Crect x='60' y='70' width='120' height='100' rx='6' fill='%23ffffff' stroke='%23c9bfae'/%3E%3Cpath d='M75 95 H165 M75 112 H155 M75 129 H140' stroke='%23b7a998' stroke-width='4'/%3E%3Crect x='230' y='50' width='110' height='120' rx='6' fill='%23b98d5b'/%3E%3Ccircle cx='285' cy='110' r='26' fill='%23f2ede4'/%3E%3C/svg%3E" alt="幕后手记：稿纸、铅笔与木质桌面">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-story-body">
+            <h3>我们为什么删掉了那段最“好看”的镜头</h3>
+            <p>剪辑到第四版时，那段逆光慢镜被所有人夸赞。但它不属于这个故事，我们最终一起删掉了它。纪录片最大的诱惑，是把自己感动当成真实。</p>
+            <div class="jphl-story-sign">陆声 · 2026 年 11 月 10 日</div>
+          </div>
+        </article>
+
+        <article class="jphl-story">
+          <div class="jphl-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e7ece9'/%3E%3Crect x='0' y='180' width='400' height='45' fill='%23c3cfc8'/%3E%3Crect x='70' y='60' width='260' height='120' rx='8' fill='%23ffffff' stroke='%23c3cfc8'/%3E%3Crect x='92' y='82' width='80' height='60' rx='4' fill='%2399b3a8'/%3E%3Crect x='186' y='82' width='120' height='10' rx='5' fill='%23b9c8c0'/%3E%3Crect x='186' y='102' width='90' height='10' rx='5' fill='%23b9c8c0'/%3E%3Crect x='186' y='122' width='110' height='10' rx='5' fill='%23b9c8c0'/%3E%3C/svg%3E" alt="幕后手记：桌面上的分镜表与便签">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-story-body">
+            <h3>给第一次投稿的人：先别急着买设备</h3>
+            <p>过去一年看了三百多份投稿，最常被问的是“要买什么机器”。我们的回答可能让人失望：先用手上已有的东西拍完一条，再谈器材。</p>
+            <div class="jphl-story-sign">徐果工作室 · 2026 年 10 月 28 日</div>
+          </div>
+        </article>
+
+        <article class="jphl-story">
+          <div class="jphl-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f6ece4'/%3E%3Crect x='0' y='175' width='400' height='50' fill='%23e0c9b6'/%3E%3Ccircle cx='130' cy='110' r='48' fill='%23d98f6a' opacity='0.8'/%3E%3Ccircle cx='250' cy='100' r='58' fill='%23c97a55' opacity='0.65'/%3E%3Crect x='60' y='150' width='280' height='12' rx='6' fill='%23b96a45' opacity='0.5'/%3E%3Cpath d='M40 60 Q120 40 200 60 T380 60' stroke='%23b96a45' stroke-width='3' fill='none' opacity='0.4'/%3E%3C/svg%3E" alt="幕后手记：暖橘色面团与面粉的手作场景">
+            <div class="jphl-cover-shade"></div>
+          </div>
+          <div class="jphl-story-body">
+            <h3>拍面馆那次，我们在门口站了两个小时</h3>
+            <p>老板不收拍摄费，也不愿意被拍脸。我们在门口站了两个小时，直到他端出一碗面说“先吃”。那碗面成了片子的开场。</p>
+            <div class="jphl-story-sign">林间食记 · 2026 年 10 月 15 日</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据榜单 -->
+  <section class="jphl-section jphl-section-alt" id="jphl-rank">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">数据榜单</span>
+          <h2>本周榜单 · <span>三个维度看内容</span></h2>
+          <p>数据来自站内公开统计，每周三更新，供创作者与用户参考。</p>
+        </div>
+      </div>
+      <div class="jphl-rank">
+        <div class="jphl-rankcol">
+          <h3><em>热度</em>本周最受关注</h3>
+          <div class="jphl-rankrow"><span class="jphl-rankno">1</span><b>雨天的猫，和一条不肯挪窝的长椅</b><i>7.5万</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">2</span><b>从零学剪辑：三个动作让画面稳下来</b><i>6.8万</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">3</span><b>在老城区找一堵会讲故事的墙</b><i>5.2万</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">4</span><b>拍一条三分钟的短片，我们改了十四版脚本</b><i>4.4万</i></div>
+        </div>
+        <div class="jphl-rankcol">
+          <h3><em>口碑</em>评分最高作品</h3>
+          <div class="jphl-rankrow"><span class="jphl-rankno">1</span><b>一间只有六平方米的书店，开了十一年</b><i>9.6分</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">2</span><b>夜班公交司机的最后三站</b><i>9.5分</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">3</span><b>老巷里的第七家裁缝铺</b><i>9.4分</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">4</span><b>十二楼的阳台菜园，第三年</b><i>9.2分</i></div>
+        </div>
+        <div class="jphl-rankcol">
+          <h3><em>新人</em>本月成长最快</h3>
+          <div class="jphl-rankrow"><span class="jphl-rankno">1</span><b>许一只</b><i>+2.1万关注</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">2</span><b>林间食记</b><i>+1.4万关注</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">3</span><b>苏木手作</b><i>+9200关注</i></div>
+          <div class="jphl-rankrow"><span class="jphl-rankno">4</span><b>周野访谈</b><i>+6800关注</i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作灵感工具 -->
+  <section class="jphl-section" id="jphl-idea">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">创作灵感</span>
+          <h2>灵感与工具 · <span>帮你把想法落到拍摄单上</span></h2>
+          <p>由编辑组整理的思路与提示，供投稿前参考，不替代你自己的判断。</p>
+        </div>
+      </div>
+      <div class="jphl-idea">
+        <div class="jphl-idea-list">
+          <div class="jphl-idea-item">
+            <h3>从一个具体动作开场</h3>
+            <p>不要用城市空镜开头。先拍一个人在做一件具体的事：擦桌子、系鞋带、关灯。观众需要一个可进入的细节。</p>
+          </div>
+          <div class="jphl-idea-item">
+            <h3>访谈只问三个问题</h3>
+            <p>问题越多，回答越浅。留下三个真正想知道的问题，中间给足沉默，素材自然会给出你想要的部分。</p>
+          </div>
+          <div class="jphl-idea-item">
+            <h3>给短片留一个安静的结尾</h3>
+            <p>结尾不必总结。让画面多停留五秒，把解释权交回给观众，这往往是作品与观众建立信任的地方。</p>
+          </div>
+          <div class="jphl-idea-item">
+            <h3>先确定你放弃什么</h3>
+            <p>三分钟的片子装不下全部。写下必须放弃的两件事，然后保护留下来的那一件，把它拍到无可替代。</p>
+          </div>
+        </div>
+        <div class="jphl-toolbox">
+          <h3>标题灵感生成器</h3>
+          <p>选择一个方向，即时给出三个可用的标题结构，供你改写成自己的语气。</p>
+          <div class="jphl-tool-chips" id="jphlIdeaChips">
+            <button type="button" data-idea="城市探索">城市探索</button>
+            <button type="button" data-idea="人物访谈">人物访谈</button>
+            <button type="button" data-idea="手作教程">手作教程</button>
+            <button type="button" data-idea="生活方式">生活方式</button>
+          </div>
+          <div class="jphl-tool-output" id="jphlIdeaOutput">点击上方任一方向，查看三个标题结构示例。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 合作品牌 -->
+  <section class="jphl-section jphl-section-alt" id="jphl-news">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">企业动态</span>
+          <h2>品牌新布 · <span>官方发布与更新日志</span></h2>
+          <p>关于平台规则、功能与企划进展的正式记录。</p>
+        </div>
+      </div>
+      <div class="jphl-news">
+        <article class="jphl-news-item">
+          <div class="jphl-news-date"><b>18</b><small>11月</small></div>
+          <div class="jphl-news-body">
+            <h3>创作者后台改版上线，投稿流程缩短为四步</h3>
+            <p>新增草稿自动保存与素材校验提示，减少因格式问题导致的退回。</p>
+          </div>
+        </article>
+        <article class="jphl-news-item">
+          <div class="jphl-news-date"><b>12</b><small>11月</small></div>
+          <div class="jphl-news-body">
+            <h3>“第一次拍”扶持计划开放报名，名额 30 组</h3>
+            <p>提供器材借用、场地协调与一对一指导，报名截止 12 月 5 日。</p>
+          </div>
+        </article>
+        <article class="jphl-news-item">
+          <div class="jphl-news-date"><b>05</b><small>11月</small></div>
+          <div class="jphl-news-body">
+            <h3>《城市暗涌》冬季企划正式发布首集</h3>
+            <p>本季共六集，聚焦夜班与地下空间，每周三更新。</p>
+          </div>
+        </article>
+        <article class="jphl-news-item">
+          <div class="jphl-news-date"><b>27</b><small>10月</small></div>
+          <div class="jphl-news-body">
+            <h3>版权说明与转载规范更新，明确二创边界</h3>
+            <p>新增授权申请入口，商业使用需提前提交用途说明。</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 style="font-size:15px;font-weight:800;margin:36px 0 16px">合作品牌与伙伴</h3>
+      <div class="jphl-partners">
+        <div class="jphl-partner">青川文化</div>
+        <div class="jphl-partner">木下工作室</div>
+        <div class="jphl-partner">城南书舍</div>
+        <div class="jphl-partner">拾光影像</div>
+        <div class="jphl-partner">一方陶社</div>
+        <div class="jphl-partner">夜航书店</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="jphl-section" id="jphl-reviews">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">社区口碑</span>
+          <h2>来自用户与创作者的 <span>真实反馈</span></h2>
+          <p>意见有长有短，我们照单收录。</p>
+        </div>
+      </div>
+      <div class="jphl-reviews">
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-2">何</span><div><b>何先生</b><small>内容运营 · 使用 3 年</small></div></div>
+          <p>最打动我的是它对慢的容忍。别的地方恨不得一天发三条，这里一条片子可以挂着一个“制作中”标签挂半年，然后真的值得等。</p>
+          <div class="jphl-rv-stars">★★★★★</div>
+        </article>
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-3">罗</span><div><b>罗小满</b><small>自由创作者 · 使用 1 年</small></div></div>
+          <p>第一次投稿被退回，附了很细的修改建议，不是套话。后来按建议重剪了一条，那是我到现在最满意的一条。</p>
+          <div class="jphl-rv-stars">★★★★★</div>
+        </article>
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-5">郑</span><div><b>郑先生</b><small>教师 · 使用 2 年</small></div></div>
+          <p>给学生找素材时会先来这里，因为基本不用担心内容质量参差。缺点是想看的都没了，往往一口气看完一个专题就凌晨了。</p>
+          <div class="jphl-rv-stars">★★★★☆</div>
+        </article>
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-1">阿</span><div><b>阿杏</b><small>手作爱好者 · 使用 4 年</small></div></div>
+          <p>跟着苏木的教程做过两个小木架，材料表写得特别实在，连钉子用几号的都写了。这种细节最见诚意。</p>
+          <div class="jphl-rv-stars">★★★★★</div>
+        </article>
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-6">陈</span><div><b>陈一鸣</b><small>摄影爱好者 · 使用半年</small></div></div>
+          <p>页面加载快，没有乱七八糟的弹窗，这点在现在的站点里很少见了。希望能出移动端的离线收藏。</p>
+          <div class="jphl-rv-stars">★★★★☆</div>
+        </article>
+        <article class="jphl-rv">
+          <div class="jphl-rv-top"><span class="jphl-avatar jphl-av-4">木</span><div><b>木小川</b><small>设计师 · 使用 2 年</small></div></div>
+          <p>专题的编辑思路比单个作品更有价值。《手上的时间》那个系列，看完是会想去学一门手的技术的。</p>
+          <div class="jphl-rv-stars">★★★★★</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 / 投稿 -->
+  <section class="jphl-contact" id="jphl-contact">
+    <div class="jphl-wrap">
+      <div>
+        <span class="jphl-kicker" style="color:#ffb3b3">联系与投稿</span>
+        <h2>把你想拍的，交给 <span>对的地方</span></h2>
+        <p>我们长期开放投稿与合作洽谈。无论是成片、脚本、素材计划，还是想与我们共同发起一个专题，都欢迎先聊一聊。</p>
+        <div class="jphl-contact-list">
+          <div>投稿邮箱 · <b>submit@jipinheiliaowang.example</b></div>
+          <div>商务合作 · <b>brand@jipinheiliaowang.example</b></div>
+          <div>工作时间 · <b>周一至周五 10:00 – 18:00</b></div>
+          <div>办公地址 · <b>城市青年影像中心 3 层</b></div>
+        </div>
+      </div>
+      <div class="jphl-contact-panel">
+        <h3>快速投稿登记</h3>
+        <small>提交后 3 个工作日内由编辑组回复，请留下有效联系方式。</small>
+        <form id="jphlSubmitForm">
+          <div class="jphl-field">
+            <label for="jphlFormName">称呼</label>
+            <input type="text" id="jphlFormName" placeholder="如何称呼你" required>
+          </div>
+          <div class="jphl-field">
+            <label for="jphlFormContact">联系方式</label>
+            <input type="text" id="jphlFormContact" placeholder="邮箱或常用社交账号" required>
+          </div>
+          <div class="jphl-field">
+            <label for="jphlFormMsg">作品简介</label>
+            <textarea id="jphlFormMsg" placeholder="题材、时长、目前进度"></textarea>
+          </div>
+          <button type="submit" class="jphl-btn jphl-btn-main">提交登记</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="jphl-section jphl-section-alt" id="jphl-faq">
+    <div class="jphl-wrap">
+      <div class="jphl-sec-head">
+        <div>
+          <span class="jphl-kicker">帮助中心</span>
+          <h2>常见问题 · <span>投稿、版权与观看</span></h2>
+          <p>关于平台规则最常被问到的七件事。</p>
+        </div>
+      </div>
+      <div class="jphl-faq">
+        <details>
+          <summary>投稿对作品时长和格式有什么要求？</summary>
+          <p>单条作品建议 3 至 30 分钟，支持常见视频封装格式与 1080p 以上清晰度。若为系列企划，可在提交时一并说明集数与更新节奏，编辑组会协助安排展示顺序。</p>
+        </details>
+        <details>
+          <summary>作品版权归谁？平台会二次使用吗？</summary>
+          <p>版权始终归创作者所有。平台仅在获得授权的前提下进行站内展示与专题推荐，商业用途需另行签署授权说明。任何转载与二创均以版权说明页公示的规则为准。</p>
+        </details>
+        <details>
+          <summary>审核一般需要多久？被退回怎么办？</summary>
+          <p>常规审核为 3 至 5 个工作日，专题类与长访谈会稍长。若被退回，会随附具体修改建议，可据此调整后重新提交，不受次数限制。</p>
+        </details>
+        <details>
+          <summary>“第一次拍”扶持计划如何报名？</summary>
+          <p>在本页投稿登记中选择注明参与意向，或直接向投稿邮箱发送作品计划。扶持内容包括器材借用、场地协调与导师一对一指导，每季名额有限。</p>
+        </details>
+        <details>
+          <summary>内容是否需要付费才能浏览？</summary>
+          <p>站内公开作品均可直接浏览，无需额外付费。部分合作专题会标注来源与授权信息，请以页面标注为准。</p>
+        </details>
+        <details>
+          <summary>如何在社区里参与话题与比赛？</summary>
+          <p>注册后即可参与话题讨论与投票。比赛通常随专题企划同步开放，报名入口会出现在公告条与企业动态中，请留意官方发布。</p>
+        </details>
+        <details>
+          <summary>发现内容或评论有问题，怎么反馈？</summary>
+          <p>可在对应作品的分享菜单中提交举报，或通过页面联系邮箱说明具体情况。我们会在两个工作日内核查并回复处理结果。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="jphl-footer">
+  <div class="jphl-wrap">
+    <div class="jphl-foot-top">
+      <div class="jphl-foot-brand">
+        <span class="jphl-logo-text">极品黑料网<small>JIPIN HEILIAO</small></span>
+        <p>极品黑料网官方网站 · 一个持续运营的原创影像品牌与创作者社区。我们以真实、温暖、有力量为标准，深耕多元影像内容这一垂直领域。</p>
+      </div>
+      <div class="jphl-foot-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#jphl-focus">影像焦点</a></li>
+          <li><a href="#jphl-flow">社区热门</a></li>
+          <li><a href="#jphl-topics">专题企划</a></li>
+          <li><a href="#jphl-stories">幕后手记</a></li>
+        </ul>
+      </div>
+      <div class="jphl-foot-col">
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#jphl-about">品牌解析</a></li>
+          <li><a href="#jphl-creators">创作者矩阵</a></li>
+          <li><a href="#jphl-news">企业动态</a></li>
+          <li><a href="#jphl-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div class="jphl-foot-col">
+        <h4>支持</h4>
+        <ul>
+          <li><a href="#jphl-faq">帮助中心</a></li>
+          <li><a href="#jphl-contact">联系与投稿</a></li>
+          <li><a href="#jphl-idea">创作灵感</a></li>
+          <li><a href="#jphl-reviews">社区口碑</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="jphl-foot-bottom">
+      <span>© 2026 极品黑料网 版权所有 · 官方网站 · 持续运营中</span>
+      <span>品牌备案信息：影像内容平台 · 正版高清 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="jphl-totop" id="jphlToTop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V6"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="jphl-toast" id="jphlToast">已复制</div>
+
+<div class="jphl-modal" id="jphlModal">
+  <div class="jphl-modal-box">
+    <button class="jphl-modal-close" id="jphlModalClose" aria-label="关闭">✕</button>
+    <h3 id="jphlModalTitle">标题</h3>
+    <div id="jphlModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Toast */
+  var toastEl = document.getElementById('jphlToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 1900);
+  }
+
+  /* Modal */
+  var modal = document.getElementById('jphlModal');
+  var modalTitle = document.getElementById('jphlModalTitle');
+  var modalBody = document.getElementById('jphlModalBody');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('open');
+  }
+  function closeModal(){ modal.classList.remove('open'); }
+  document.getElementById('jphlModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* 移动端导航 */
+  var burger = document.getElementById('jphlBurger');
+  var mobileNav = document.getElementById('jphlMobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('open');
+      burger.textContent = '☰';
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索反馈 */
+  var flowInput = document.getElementById('jphlFlowInput');
+  var flowSearch = document.getElementById('jphlFlowSearch');
+  var noResult = document.getElementById('jphlNoResult');
+  var grid = document.getElementById('jphlFlowGrid');
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.jphl-vc'));
+
+  function filterFlow(keyword){
+    var kw = (keyword || '').trim().toLowerCase();
+    var visible = 0;
+    cards.forEach(function(card){
+      var text = (card.getAttribute('data-title') + ' ' + (card.getAttribute('data-tags') || '') + ' ' + card.textContent).toLowerCase();
+      var hit = kw === '' || text.indexOf(kw) !== -1;
+      card.style.display = hit ? '' : 'none';
+      if(hit) visible++;
+    });
+    noResult.classList.toggle('show', visible === 0);
+    return visible;
+  }
+
+  flowSearch.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = filterFlow(flowInput.value);
+    if(n > 0){ showToast('找到 ' + n + ' 条相关影像'); }
+    else { showToast('没有匹配结果，已提示'); }
+  });
+
+  var topSearch = document.getElementById('jphlTopSearch');
+  var topInput = document.getElementById('jphlTopInput');
+  topSearch.addEventListener('submit', function(e){
+    e.preventDefault();
+    var kw = topInput.value.trim();
+    if(!kw){ showToast('请输入关键词'); return; }
+    flowInput.value = kw;
+    filterFlow(kw);
+    document.getElementById('jphl-flow').scrollIntoView({behavior:'smooth'});
+    showToast('正在筛选：' + kw);
+  });
+
+  var mobileSearch = document.getElementById('jphlMobileSearch');
+  var mobileInput = document.getElementById('jphlMobileInput');
+  mobileSearch.addEventListener('submit', function(e){
+    e.preventDefault();
+    var kw = mobileInput.value.trim();
+    if(!kw){ showToast('请输入关键词'); return; }
+    flowInput.value = kw;
+    filterFlow(kw);
+    mobileNav.classList.remove('open');
+    burger.textContent = '☰';
+    document.getElementById('jphl-flow').scrollIntoView({behavior:'smooth'});
+    showToast('正在筛选：' + kw);
+  });
+
+  /* 点赞 / 收藏 */
+  grid.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('.jphl-like');
+    if(likeBtn){
+      var span = likeBtn.querySelector('span');
+      var base = parseInt(likeBtn.getAttribute('data-count'), 10) || 0;
+      var on = likeBtn.classList.toggle('on');
+      span.textContent = on ? (base + 1) : base;
+      showToast(on ? '已点赞' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('.jphl-fav');
+    if(favBtn){
+      var on2 = favBtn.classList.toggle('on');
+      favBtn.querySelector('svg').setAttribute('fill', on2 ? 'currentColor' : 'none');
+      showToast(on2 ? '已加入收藏' : '已取消收藏');
+      return;
+    }
+    var cBtn = e.target.closest('.jphl-comment');
+    if(cBtn){
+      var card = cBtn.closest('.jphl-vc');
+      openModal('评论 · ' + card.getAttribute('data-title'),
+        '<p>评论区按时间排序展示用户讨论。当前作品共有 46 条公开评论，点赞较高的几条：</p>' +
+        '<p style="color:#999;margin-top:6px">“看完想起我老家的那条街。” · 12 赞<br>“镜头很稳，结尾处理得克制。” · 9 赞<br>“求拍摄地点，想去走一遍。” · 7 赞</p>' +
+        '<p>发表评论需登录账号，社区鼓励有内容的讨论。</p>');
+      return;
+    }
+    var sBtn = e.target.closest('.jphl-share');
+    if(sBtn){
+      var card2 = sBtn.closest('.jphl-vc');
+      var t = card2.getAttribute('data-title');
+      openModal('分享 · ' + t,
+        '<p>选择分享方式，或复制页面信息发送给朋友。</p>' +
+        '<div class="jphl-share-row">' +
+        '<button type="button" data-share="微信">微信</button>' +
+        '<button type="button" data-share="微博">微博</button>' +
+        '<button type="button" data-share="QQ">QQ</button>' +
+        '<button type="button" data-share="复制链接">复制链接</button>' +
+        '</div>');
+      return;
+    }
+  });
+
+  /* 弹窗内分享按钮 */
+  modalBody.addEventListener('click', function(e){
+    var b = e.target.closest('[data-share]');
+    if(!b) return;
+    var val = b.getAttribute('data-share');
+    if(val === '复制链接'){
+      copyText('极品黑料网 · 影像品牌官方网站');
+      showToast('内容信息已复制');
+    } else {
+      showToast('已生成' + val + '分享内容');
+    }
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).catch(function(){ fallbackCopy(text); });
+    } else {
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); }catch(err){}
+    document.body.removeChild(ta);
+  }
+
+  /* 作者档案 */
+  document.querySelectorAll('.jphl-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      var field = btn.getAttribute('data-field');
+      var desc = btn.getAttribute('data-desc');
+      openModal('作者档案 · ' + name,
+        '<p><b>擅长领域：</b>' + field + '</p>' +
+        '<p>' + desc + '</p>' +
+        '<p>长期在本平台更新原创影像内容，作品均标注制作说明与拍摄周期，欢迎关注。</p>' +
+        '<div class="jphl-share-row"><button type="button" data-share="复制链接">复制档案信息</button></div>');
+    });
+  });
+
+  /* 标题灵感生成器 */
+  var ideaData = {
+    '城市探索': ['凌晨四点的「地点」，我在那里待了一整夜','走过「地点」的三条小巷，找到六个不被注意的门牌','「地点」最后一家「业态」，和守店的人'],
+    '人物访谈': ['和「人物」聊了三小时，他谈到「话题」时停住了','「人物」的十年：一间「场所」和一句没说完的话','问「人物」三个问题，第三个他想了很久'],
+    '手作教程': ['用「材料」做一件能用的东西，全程八步','从零开始：把「旧物」修回原来的样子','「材料」改造指南：附完整材料清单与常见误操作'],
+    '生活方式': ['在「面积」的空间里，我坚持了「年数」年的一件事','关于「习惯」，我失败了很多次，最后留住了这一点','一个人的「场景」：不需要太整齐，也能过得很好']
+  };
+  var ideaOutput = document.getElementById('jphlIdeaOutput');
+  document.getElementById('jphlIdeaChips').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-idea]');
+    if(!b) return;
+    var list = ideaData[b.getAttribute('data-idea')] || [];
+    var html = '<b>' + b.getAttribute('data-idea') + '</b> · 三个可用标题结构：<br>';
+    list.forEach(function(item, i){ html += (i + 1) + '. ' + item + '<br>'; });
+    html += '<span style="color:#7d7c87">提示：把「」内的内容替换成你的真实场景，标题会更具体。</span>';
+    ideaOutput.innerHTML = html;
+  });
+
+  /* 投稿表单 */
+  document.getElementById('jphlSubmitForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('jphlFormName').value.trim();
+    var contact = document.getElementById('jphlFormContact').value.trim();
+    if(!name || !contact){ showToast('请填写称呼与联系方式'); return; }
+    this.reset();
+    showToast('登记已提交，编辑组将在 3 个工作日内回复');
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('jphlToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  });
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 数字滚动（首屏统计） */
+  var stats = document.querySelectorAll('.jphl-hero-stats b');
+  var animated = false;
+  function animateStats(){
+    if(animated) return;
+    animated = true;
+    stats.forEach(function(el){
+      var raw = el.textContent;
+      var num = parseInt(raw.replace(/[^\d]/g, ''), 10);
+      if(isNaN(num)) return;
+      var suffix = raw.replace(/[\d]/g, '');
+      var start = 0;
+      var step = Math.max(1, Math.floor(num / 40));
+      var timer = setInterval(function(){
+        start += step;
+        if(start >= num){
+          start = num;
+          clearInterval(timer);
+        }
+        el.innerHTML = start + suffix;
+      }, 26);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) animateStats(); });
+    }, {threshold:.4});
+    var heroStats = document.querySelector('.jphl-hero-stats');
+    if(heroStats) io.observe(heroStats);
+  } else {
+    animateStats();
+  }
+})();
+</script>
+</body>
+  </html>
